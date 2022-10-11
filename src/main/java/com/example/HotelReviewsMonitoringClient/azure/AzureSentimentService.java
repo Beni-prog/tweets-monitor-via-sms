@@ -17,7 +17,8 @@ import java.util.Collections;
 @Service
 public class AzureSentimentService {
 
-    private static final String azureAPIKey = "296cbd6e145d4e828f8fdb29b4ac17ba";
+    @Value(${"AZURE_API_KEY"})
+    private static final String azureAPIKey;
     public static final String AZURE_ENDPOINT = "https://landon-hotel-tweats-monitoring.cognitiveservices.azure.com";
     public static final String AZURE_ENDPOINT_PATH = "/language/:analyze-text?api-version=2022-05-01";
     public static final String API_KEY_HEADER_NAME = "Ocp-Apim-Subscription-Key";
