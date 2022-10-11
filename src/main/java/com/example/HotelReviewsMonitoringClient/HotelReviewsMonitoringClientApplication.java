@@ -24,9 +24,12 @@ import java.io.IOException;
 @SpringBootApplication
 public class HotelReviewsMonitoringClientApplication implements CommandLineRunner {
 
-    private static final String twilioSid = "ACe0da70850a27c1d2bc50dd11291450d6";
-    private static final String twilioAuthToken = "38729aba1e5b57146bb81d7918a331bd";
-    private static final String toNumber = "+40757768609";
+    @Value(${"TWILIO_SID"})
+    private static final String twilioSid;
+    @Value(${"TWILIO_AUTH_TOKEN"})
+    private static final String twilioAuthToken;
+    @Value(${"TWILIO_TO_NUMBER"})
+    private static final String toNumber;
     public static final String FROM_NUMBER = "+16812023405";
     public static final String TWILIO_API_DOMAIN = "https://api.twilio.com";
 
