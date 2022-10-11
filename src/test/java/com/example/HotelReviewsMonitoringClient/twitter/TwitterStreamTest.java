@@ -9,7 +9,8 @@ import java.io.IOException;
 
 @SpringBootTest
 public class TwitterStreamTest {
-    private final String bearerToken = "AAAAAAAAAAAAAAAAAAAAAOI6hwEAAAAA9yQQmpF8%2BE88nuJDkxCtD67w45w%3DNzYvwSEFNapxCX4eJpyYp78308qSPaFPcY5E1yjoMErUlvwgdT";
+    @Value(${"TWITTER_BEARER_TOKEN"})
+    private final String bearerToken;
     private final static String API_TWITTER_ENDPOINT = "https://api.twitter.com";
     private final static String API_TWITTER_STREAM_RULES_PATH = "/2/tweets/search/stream/rules";
     private final static String API_TWITTER_STREAM_PATH = "/2/tweets/search/stream";
