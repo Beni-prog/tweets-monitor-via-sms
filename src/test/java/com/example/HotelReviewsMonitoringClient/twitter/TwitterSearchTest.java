@@ -13,7 +13,8 @@ import reactor.core.publisher.Mono;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TwitterSearchTest {
-    private final String bearerToken = "AAAAAAAAAAAAAAAAAAAAAOI6hwEAAAAA9yQQmpF8%2BE88nuJDkxCtD67w45w%3DNzYvwSEFNapxCX4eJpyYp78308qSPaFPcY5E1yjoMErUlvwgdT";
+    @Value(${"TWITTER_BEARER_TOKEN"})
+    private final String bearerToken;
     private final static String API_TWITTER_ENDPOINT = "https://api.twitter.com";
     private final static String API_TWITTER_TWEETS_PATH = "/2/tweets/search/recent";
 
