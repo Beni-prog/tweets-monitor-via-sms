@@ -15,7 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @ActiveProfiles("test")
 @SpringBootTest
 public class AzureSentimentClientTest {
-    private static final String apiKey = "296cbd6e145d4e828f8fdb29b4ac17ba";
+    @Value(${"AZURE_API_KEY"})
+    private static final String apiKey;
     public static final String AZURE_ENDPOINT = "https://landon-hotel-tweats-monitoring.cognitiveservices.azure.com";
 
     @Test
