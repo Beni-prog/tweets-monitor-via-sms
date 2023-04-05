@@ -1,5 +1,5 @@
 # tweets-monitor-via-sms
-With this project I got a better understanding regarding the REST API in Java. I used three API: Azure Cognitive Services API, the Twitter API and the Twilio API.
+With this project I got a better understanding regarding the REST API in Java. I used three APIs: Azure Cognitive Services API, the Twitter API and the Twilio API.
 
 1. With the help of Twitter API I managed to get all the tweets about a certain subject.
 2. With the help of Azure Cognitive Services API I managed to send the tweets to be sentimentally analyzed: a tweet can be positive, negative or neutral, just like a review.
